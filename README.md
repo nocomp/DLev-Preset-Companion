@@ -53,3 +53,53 @@ Clone or download this repository, then install the dependencies:
 ```bash
 cd dlev-preset-companion
 pip3 install -r requirements.txt
+
+🚀 Usage
+
+From the directory containing both d-lin and dlev_preset_companion.py:
+
+python3 dlev_preset_companion.py
+
+
+If you require root access for serial communication, use:
+
+sudo -E python3 dlev_preset_companion.py
+
+
+Then:
+
+Connect your D-Lev via USB.
+
+Load a vocal preset (e.g. Patsy, Tenor, or your custom voice).
+
+Click “Capture Base From Current Slot” to save your reference.
+
+Choose a voice profile and sculpt the sound using the XY pad.
+
+Use sliders to reduce harshness (Brightness ↓, Resonance ↓).
+
+Optionally load a .wav file to visualize and match a real voice.
+
+Save your preset (Save Current Slot To .dlp) or copy to another slot.
+
+🧪 Experimental Notice
+
+This project is highly experimental and may produce unpredictable or unstable results depending on your D-Lev firmware and preset state.
+Always back up your EEPROM and presets before use:
+
+sudo ./d-lin dump -f backup.eeprom
+
+
+Use at your own risk and have fun exploring — this tool is meant for research, learning, and sonic experimentation.
+
+🧰 Roadmap
+
+ Add gradient visualization for spectral energy (Chest ↔ Head, Dark ↔ Bright).
+
+ Add direct .dlp generation from measured formants.
+
+ Implement formant detection directly from .wav (basic LPC).
+
+ Optional MIDI/OSC control layer for remote morphing.
+
+ Add small spectral display or live input analyzer.
